@@ -42,12 +42,7 @@ class _RideHistoryScreenState extends State<RideHistoryScreen> {
   }
 
   void _scrollListener() {
-    if (_scrollController.offset >=
-            _scrollController.position.maxScrollExtent &&
-        !_scrollController.position.outOfRange) {
-      // User has reached the bottom of the list, can fetch more data if needed
-    } else if (_scrollController.offset <=
-            _scrollController.position.minScrollExtent &&
+    if (_scrollController.offset >= 100 &&
         !_scrollController.position.outOfRange) {
       setState(() {
         showScrollToTopButton = true;
@@ -216,12 +211,3 @@ class RideCard extends StatelessWidget {
     );
   }
 }
-
-
-//  AppBar(
-//         backgroundColor: Colors.white,
-//         title: Text(
-//           'Suggested Routes',
-//           style: TextStyle(color: Colors.black),
-//         ),
-//       ),
